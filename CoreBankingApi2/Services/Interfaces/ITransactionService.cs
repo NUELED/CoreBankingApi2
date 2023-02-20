@@ -8,6 +8,7 @@ namespace CoreBankingApi2.Services.Interfaces
         Response FindTransactionByDate(DateTime date); 
         Response MakeDeposit(string AccountNumber, decimal Amount, string TransactionPin); 
         Response MakeWithdrawal(string AccountNumber, decimal Amount, string TransactionPin); 
-        Response MakeFundsTransfer(string FromAccount, string ToAccount, decimal Amount, int TransactionPin); 
+        Response MakeFundsTransfer(string FromAccount, string ToAccount, decimal Amount, string TransactionPin);
+       
     }
 }

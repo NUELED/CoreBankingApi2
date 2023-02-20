@@ -52,6 +52,9 @@ namespace CoreBankingApi2.Controllers
 
         [HttpPost]
         [Route("authenticate")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public IActionResult Authenticatet([FromBody] AuthenticateModel model)
         {
 

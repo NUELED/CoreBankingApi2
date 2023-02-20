@@ -1,6 +1,7 @@
 using CoreBankingApi2.DAL;
 using CoreBankingApi2.Services.Implementations;
 using CoreBankingApi2.Services.Interfaces;
+using CoreBankingApi2.Utilities;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,9 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings")); // Another way of calling from appsettings.json
 builder.Services.AddDbContext<BankingDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("BankingDbConnection")));
 builder.Services.AddControllers();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(x =>

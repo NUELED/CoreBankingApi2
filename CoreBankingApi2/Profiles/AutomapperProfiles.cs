@@ -11,6 +11,9 @@ namespace CoreBankingApi2.Profiles
             CreateMap<RegisterNewAccountModel, Account>();
             CreateMap<UpdateAccountModel, Account>();
             CreateMap<Account, GetAccountModel>();
+
+            CreateMap<TransactionRequestDto, Transaction>();
+           // CreateMap< Transaction,TransactionRequestDto > ();  / not needed
         }
       
     }
