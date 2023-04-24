@@ -1,12 +1,18 @@
 using CoreBankingApi2.DAL;
+using CoreBankingApi2.Logging;
 using CoreBankingApi2.Services.Implementations;
 using CoreBankingApi2.Services.Interfaces;
 using CoreBankingApi2.Utilities;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo.File("log/bankinglogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo.File("Vlogs/BankLogs.txt", rollingInterval: RollingInterval.Day).WriteTo.Console().CreateLogger();
+builder.Host.UseSerilog();
+builder.Services.AddSingleton<ILogging, LoggingV2>();
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

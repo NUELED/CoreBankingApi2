@@ -38,7 +38,7 @@ namespace CoreBankingApi2.Services.Implementations
             _dbContext.SaveChanges();
             response.ResponseCode = "00";
             response.ResponseMessage = "Transaction created successsfully";
-            response.Data = null;
+            response.Data = transaction;
 
             return response;    
         }
@@ -66,8 +66,8 @@ namespace CoreBankingApi2.Services.Implementations
             Transaction transaction = new Transaction();
 
             //check that user account is valid
-           // var authUser = _accountService.Authenticate(AccountNumber, TransactionPin);
-           // if (authUser == null) throw new ApplicationException("Invalid credential");
+            var authUser = _accountService.Authenticate(AccountNumber, TransactionPin);
+            if (authUser == null) throw new ApplicationException("Invalid credential");
 
 
             //validation passes

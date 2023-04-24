@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CoreBankingApi2.DTOs;
+using CoreBankingApi2.Logging;
 using CoreBankingApi2.Models;
 using CoreBankingApi2.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -16,11 +17,15 @@ namespace CoreBankingApi2.Controllers
     {
         private readonly IAccountService _accountService;
         private readonly IMapper _mapper;
+        //private readonly ILogger<AccountsController> _logger;   
+        private readonly ILogging _logger;   
 
-        public AccountsController(IAccountService accountService, IMapper mapper)
+        public AccountsController(IAccountService accountService, IMapper mapper,/* ILogger<AccountsController> logger*/ ILogging logger)
         {
             _accountService = accountService;
             _mapper = mapper;   
+           // _logger = logger;   
+            _logger = logger;   
         }
 
 
@@ -43,9 +48,31 @@ namespace CoreBankingApi2.Controllers
         [Route("get_all_accounts")]
         public IActionResult GetAllAccounts()
         {
-            var accounts = _accountService.GetAllAccounts();
-            var cleanedAccounts =_mapper.Map<IList<GetAccountModel>>(accounts);
-            return Ok(cleanedAccounts);
+            try
+            {
+                // _logger.LogInformation("Fetching all accounts from the database"); // this is for the custom logger "Ilogger"
+                _logger.Information("Fetching all accounts from the database ##################***********", "Information"); //
+
+                var accounts = _accountService.GetAllAccounts();
+
+               // throw new Exception("An issue occured while getting all the accounts from the database");
+                var cleanedAccounts = _mapper.Map<IList<GetAccountModel>>(accounts);
+
+                
+
+                //  _logger.LogInformation("Returning all the accounts from the database"); // this is for the custom logger "Ilogger"
+                _logger.Log("Returning all the accounts from the database","warning");
+                return Ok(cleanedAccounts);
+            }
+            catch (Exception ex)
+            {
+
+                // _logger.LogError($"Something went wrong: {ex}");  // this is for the custom logger  "Ilogger"
+                _logger.Log($"Something went wrong: {ex}", "error");
+                return StatusCode(500, "Internal server Error");
+            }
+            
+           
         }
 
 

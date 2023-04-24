@@ -1,0 +1,112 @@
+2023-04-23 15:50:50.710 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-23 15:50:50.808 +01:00 [DBG] Hosting starting
+2023-04-23 15:50:50.997 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9084150BB1AEAECD874665CF7934896A44F5BB30)
+2023-04-23 15:50:51.043 +01:00 [INF] Now listening on: https://localhost:7139
+2023-04-23 15:50:51.044 +01:00 [INF] Now listening on: http://localhost:5139
+2023-04-23 15:50:51.046 +01:00 [DBG] Loaded hosting startup assembly CoreBankingApi2
+2023-04-23 15:50:51.047 +01:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-23 15:50:51.048 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-23 15:50:51.051 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-23 15:50:51.052 +01:00 [INF] Hosting environment: Development
+2023-04-23 15:50:51.054 +01:00 [INF] Content root path: C:\Users\NUELE\source\repos\NuBank\CoreBankingApi2\
+2023-04-23 15:50:51.055 +01:00 [DBG] Hosting started
+2023-04-23 15:50:51.159 +01:00 [DBG] Connection id "0HMQ418GTR612" received FIN.
+2023-04-23 15:50:51.159 +01:00 [DBG] Connection id "0HMQ418GTR611" received FIN.
+2023-04-23 15:50:51.169 +01:00 [DBG] Connection id "0HMQ418GTR612" accepted.
+2023-04-23 15:50:51.169 +01:00 [DBG] Connection id "0HMQ418GTR611" accepted.
+2023-04-23 15:50:51.172 +01:00 [DBG] Connection id "0HMQ418GTR612" started.
+2023-04-23 15:50:51.172 +01:00 [DBG] Connection id "0HMQ418GTR611" started.
+2023-04-23 15:50:51.191 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-23 15:50:51.191 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-23 15:50:51.220 +01:00 [DBG] Connection id "0HMQ418GTR612" stopped.
+2023-04-23 15:50:51.221 +01:00 [DBG] Connection id "0HMQ418GTR611" stopped.
+2023-04-23 15:50:51.225 +01:00 [DBG] Connection id "0HMQ418GTR611" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-23 15:50:51.225 +01:00 [DBG] Connection id "0HMQ418GTR612" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-23 15:50:51.568 +01:00 [DBG] Connection id "0HMQ418GTR613" accepted.
+2023-04-23 15:50:51.569 +01:00 [DBG] Connection id "0HMQ418GTR613" started.
+2023-04-23 15:50:51.648 +01:00 [DBG] Connection 0HMQ418GTR613 established using the following protocol: "Tls12"
+2023-04-23 15:50:51.722 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7139/swagger/index.html - -
+2023-04-23 15:50:51.752 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-23 15:50:51.773 +01:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-23 15:50:51.774 +01:00 [DBG] Request did not match any endpoints
+2023-04-23 15:50:51.878 +01:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-23 15:50:52.002 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - -
+2023-04-23 15:50:52.002 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7139/_vs/browserLink - -
+2023-04-23 15:50:52.005 +01:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-23 15:50:52.014 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 10.8817ms
+2023-04-23 15:50:52.014 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7139/swagger/index.html - - - 200 - text/html;charset=utf-8 295.0815ms
+2023-04-23 15:50:52.026 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7139/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.1029ms
+2023-04-23 15:50:52.100 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7139/swagger/v3/swagger.json - -
+2023-04-23 15:50:52.101 +01:00 [DBG] No candidates found for the request path '/swagger/v3/swagger.json'
+2023-04-23 15:50:52.106 +01:00 [DBG] Request did not match any endpoints
+2023-04-23 15:50:52.287 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7139/swagger/v3/swagger.json - - - 200 - application/json;charset=utf-8 187.2834ms
+2023-04-23 15:50:56.190 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7139/api/v3/Accounts/get_all_accounts - -
+2023-04-23 15:50:56.199 +01:00 [DBG] 1 candidate(s) found for the request path '/api/v3/Accounts/get_all_accounts'
+2023-04-23 15:50:56.205 +01:00 [DBG] Endpoint 'CoreBankingApi2.Controllers.AccountsController.GetAllAccounts (CoreBankingApi2)' with route pattern 'api/v3/Accounts/get_all_accounts' is valid for the request path '/api/v3/Accounts/get_all_accounts'
+2023-04-23 15:50:56.219 +01:00 [DBG] Request matched endpoint 'CoreBankingApi2.Controllers.AccountsController.GetAllAccounts (CoreBankingApi2)'
+2023-04-23 15:50:56.223 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-04-23 15:50:56.228 +01:00 [INF] Executing endpoint 'CoreBankingApi2.Controllers.AccountsController.GetAllAccounts (CoreBankingApi2)'
+2023-04-23 15:50:56.237 +01:00 [INF] Route matched with {action = "GetAllAccounts", controller = "Accounts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAccounts() on controller CoreBankingApi2.Controllers.AccountsController (CoreBankingApi2).
+2023-04-23 15:50:56.249 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-23 15:50:56.254 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-04-23 15:50:56.263 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-04-23 15:50:56.269 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-23 15:50:56.280 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-04-23 15:50:56.288 +01:00 [DBG] Executing controller factory for controller CoreBankingApi2.Controllers.AccountsController (CoreBankingApi2)
+2023-04-23 15:50:56.417 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-23 15:50:56.556 +01:00 [DBG] Executed controller factory for controller CoreBankingApi2.Controllers.AccountsController (CoreBankingApi2)
+2023-04-23 15:50:59.358 +01:00 [WRN] No store type was specified for the decimal property 'CurrentAccountBalance' on entity type 'Account'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-04-23 15:50:59.363 +01:00 [WRN] No store type was specified for the decimal property 'TransactionAmount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-04-23 15:50:59.519 +01:00 [INF] Entity Framework Core 6.0.13 initialized 'BankingDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.13' with options: None
+2023-04-23 15:50:59.579 +01:00 [DBG] Compiling query expression: 
+'DbSet<Account>()'
+2023-04-23 15:50:59.761 +01:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Account>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Account.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Account.AccountName (string) Required, 1], [Property: Account.AccountNumberGenerated (string) Required, 2], [Property: Account.AccountType (AccountType) Required, 3], [Property: Account.CurrentAccountBalance (decimal) Required, 4], [Property: Account.DateCreated (DateTime) Required, 5], [Property: Account.DateLastUpdated (DateTime) Required, 6], [Property: Account.Email (string) Required, 7], [Property: Account.FirstName (string) Required, 8], [Property: Account.LastName (string) Required, 9], [Property: Account.PhoneNumber (string) Required, 10], [Property: Account.PinHash (byte[]) Required, 11], [Property: Account.PinSalt (byte[]) Required, 12] }
+        SELECT a.Id, a.AccountName, a.AccountNumberGenerated, a.AccountType, a.CurrentAccountBalance, a.DateCreated, a.DateLastUpdated, a.Email, a.FirstName, a.LastName, a.PhoneNumber, a.PinHash, a.PinSalt
+        FROM Accounts AS a), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Account>, 
+    CoreBankingApi2.DAL.BankingDbContext, 
+    False, 
+    False, 
+    True
+)'
+2023-04-23 15:50:59.805 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-23 15:50:59.848 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (40ms).
+2023-04-23 15:50:59.857 +01:00 [DBG] Opening connection to database 'MyCoreBankingApi' on server 'DESKTOP-0FRMSIG'.
+2023-04-23 15:51:00.160 +01:00 [DBG] Opened connection to database 'MyCoreBankingApi' on server 'DESKTOP-0FRMSIG'.
+2023-04-23 15:51:00.172 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountName], [a].[AccountNumberGenerated], [a].[AccountType], [a].[CurrentAccountBalance], [a].[DateCreated], [a].[DateLastUpdated], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PhoneNumber], [a].[PinHash], [a].[PinSalt]
+FROM [Accounts] AS [a]
+2023-04-23 15:51:00.209 +01:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountName], [a].[AccountNumberGenerated], [a].[AccountType], [a].[CurrentAccountBalance], [a].[DateCreated], [a].[DateLastUpdated], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PhoneNumber], [a].[PinHash], [a].[PinSalt]
+FROM [Accounts] AS [a]
+2023-04-23 15:51:00.256 +01:00 [DBG] Context 'BankingDbContext' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-04-23 15:51:00.298 +01:00 [DBG] Context 'BankingDbContext' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-04-23 15:51:00.302 +01:00 [DBG] Context 'BankingDbContext' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-04-23 15:51:00.306 +01:00 [DBG] Context 'BankingDbContext' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-04-23 15:51:00.310 +01:00 [DBG] Context 'BankingDbContext' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-04-23 15:51:00.321 +01:00 [DBG] A data reader was disposed.
+2023-04-23 15:51:00.327 +01:00 [DBG] Closing connection to database 'MyCoreBankingApi' on server 'DESKTOP-0FRMSIG'.
+2023-04-23 15:51:00.339 +01:00 [DBG] Closed connection to database 'MyCoreBankingApi' on server 'DESKTOP-0FRMSIG'.
+2023-04-23 15:51:00.369 +01:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-04-23 15:51:00.378 +01:00 [DBG] No information found on request to perform content negotiation.
+2023-04-23 15:51:00.380 +01:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-04-23 15:51:00.383 +01:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-04-23 15:51:00.387 +01:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-04-23 15:51:00.391 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CoreBankingApi2.DTOs.GetAccountModel, CoreBankingApi2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-23 15:51:00.410 +01:00 [INF] Executed action CoreBankingApi2.Controllers.AccountsController.GetAllAccounts (CoreBankingApi2) in 4117.3428ms
+2023-04-23 15:51:00.415 +01:00 [INF] Executed endpoint 'CoreBankingApi2.Controllers.AccountsController.GetAllAccounts (CoreBankingApi2)'
+2023-04-23 15:51:00.431 +01:00 [DBG] 'BankingDbContext' disposed.
+2023-04-23 15:51:00.438 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7139/api/v3/Accounts/get_all_accounts - - - 200 - application/json;+charset=utf-8 4247.7761ms

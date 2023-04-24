@@ -44,7 +44,7 @@ namespace CoreBankingApi2.Services.Implementations
                var computedPinHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(Pin));
                 for (int i = 0; i < computedPinHash.Length; i++)
                 {
-                    if (computedPinHash[i] != pinHash[i]) return false;
+                    if (computedPinHash[i] == pinHash[i]) return true;
                 }
             }
 
@@ -117,7 +117,7 @@ namespace CoreBankingApi2.Services.Implementations
 
         public void Update(Account account, string Pin = null)
         {
-            var accountToBeUpdated = _dbContext.Accounts.SingleOrDefault(x => x.Email == account.Email);
+            var accountToBeUpdated = _dbContext.Accounts.SingleOrDefault( x => x.Email.ToLower() == account.Email.ToLower() );
             if (accountToBeUpdated == null) throw new ApplicationException("Account does not exist");
             // If the account exist...then let's do the magic.
 
@@ -125,9 +125,12 @@ namespace CoreBankingApi2.Services.Implementations
             {
                 // It implies that the user wants to change their email
                 // There is an issue in this update method. We'll use id instead of email to fix it later.
-                if (_dbContext.Accounts.Any(x => x.Email == account.Email)) throw new ApplicationException
-                   ("This email" + account.Email + "already exists"); // We'll use id to look in the error thrown here instead of email.
-                   accountToBeUpdated.Email = account.Email;    
+                if (_dbContext.Accounts.Any(x => x.Email.ToLower() == account.Email.ToLower()) != null)
+                {
+                    throw new ApplicationException  ("This email" + account.Email + "already exists"); // We'll use id to look in the error thrown here instead of email.
+                    accountToBeUpdated.Email = account.Email;
+                }
+                  
             }
 
             if (!string.IsNullOrWhiteSpace(account.PhoneNumber))
